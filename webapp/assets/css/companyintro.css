@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+@import "smartcan.css";
+
+#highlight{
+	margin-bottom:10px;
+	font-weight:bold;
+	font-size:1.5em;
+}
+#intro_main{
+	margin: 0 auto; width: 1200px;
+}
+#brand_main{
+	margin-top : 50px;
+	margin-left : 150px;
+}
+#first_wrap{
+	width:1500px;
+	margin-top:30px;
+	margin-left:150px;
+}
+#about_wrap{
+	float:left;
+}
+

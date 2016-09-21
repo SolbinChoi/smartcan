@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+@import "smartcan.css";
+
+
+#main_chart{
+	margin: 0 auto; width: 1200px;
+}
+
+#brand_main{
+	margin-top : 50px;
+	margin-left : 150px;
+}
+#chart_wrap{
+	margin-top : 50px;
+	margin-left : 100px;
+}
+#chart_left{
+	float:left;
+}
+#chart_right{
+	float:left;
+}
+
