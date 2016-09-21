@@ -31,7 +31,7 @@ div#header body {position:relative; font-size:13px; color:#333; font-family:'Nan
 		.gnb_bg{position:absolute;top:86px;left:0;width:100%;height:294px;border-top:1px solid #e8e8e8;border-bottom:1px solid #e8e8e8;background: #f7f7f7;z-index: 99}
 		.gnbw:after,
 		.gnbwrap .gnb ul:after{content: "";clear: both;display: block;height: 0;visibility: hidden;}
-		.gnbwrap .logo {float:left; background:url("/gs25/assets/images/index/logo.gif") no-repeat; width:170px; height:46px; text-indent:-999em; margin:30px 0px 6px 10px}
+		.gnbwrap .logo {float:left; background:url("/smartcan/assets/images/index/flower.png") no-repeat; width:170px; height:90px; text-indent:-999em; margin:5px 0px 6px 10px}
 		.gnbwrap .logo a{width:70%;height:100%;display:block;}
 		.gnbwrap .gnb {float:left; margin:0 auto; width:780px}
 		.gnbwrap .gnb > ul {width:810px;}
@@ -75,11 +75,10 @@ div#footer body {position:relative; font-size:13px; color:#333; font-family:'Nan
 		.copy .copy_menu li a{ padding:0 8px;background:url("/gs25/assets/images/index/bg_sns.gif") no-repeat center left;}
 		.copy .copy_menu li a,.copy .copy_menu li a:hover {display:block; font-size: 11px; color:#666;}
 		.copy .copy_menu li:first-child a {padding:0 10px 0 0;font-size:12px;font-weight:bold;background:none;}
-		.copy_txt {font-size:11px; color:#666; line-height:20px}
+		.copy_txt {font-size:11px; color:#666; line-height:20px; float:left;}
 		.copy_txt a{color:#666;}
 		.copy_txt a:hover{text-decoration: underline}
 		.copy_txt .copy {font-size:12px;}
 		.copywrap .copy_logo {float:right; margin-top:-10px}
 		.copywrap .ft_banner { float:right; margin-top:13px;} 
 		.copy .copy_menu li.bold a { font-weight:bold; color:#666; font-size:12px; margin-top:-1px;}
-		
