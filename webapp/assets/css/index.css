@@ -1,8 +1,18 @@
 @CHARSET "UTF-8";
 @import "smartcan.css";
 
-#index_main{
-	margin: 0 auto; width: 990px;
+#highlight{
+	margin-bottom:10px;
+	font-weight:bold;
+	font-size:1.5em;
+}
+#highlight2{
+	margin-top:10px;
+	font-weight:bold;
+	font-size:1.2em;
+}
+#intro_main{
+	margin: 0 auto; width: 1200px;
 }
 a {color:#fff; text-decoration:none;}
 		.container_index {margin: 0 auto; width: 990px; text-align: center;}
@@ -26,6 +36,19 @@ a {color:#fff; text-decoration:none;}
 	margin-top:2px;
 	margin-bottom:20px;
 	text-align:center;
+}
+#first_wrap{
+	width:1200px;
+	margin-left:50px;
+	margin-bottom:20px;
+	float:left;
+}
+
+#about_top{
+	margin-left:60px;
+}
+#about_bottom{
+	margin-left:60px;
 }
 #ban_wrap{
 	margin-bottom:20px;
@@ -59,6 +82,24 @@ a {color:#fff; text-decoration:none;}
     background: url(/smartcan/assets/images/index/main_ban_2.gif) no-repeat;
 }
 
+#fresh_photo{
+	float:left;
+	margin-left:60px;
+}
+#end_wrap{
+	width:1200px;
+	margin-left:90px;
+	float:left;
+}
+#daily_wrap{
+	margin-top:100px;
+	float:left;
+	text-align:right;
+}
+#refresh_photo{
+	margin-left:50px;
+	float:left;
+}
 /* 버튼 */
 .btn{
 	display:inline-block;

@@ -13,13 +13,13 @@
 			<div class="left">
 				<div class="btm_sns">
 					<ul>
-						<li><a href="https://www.facebook.com/funGS25/" class="facebook" target="_blank"><span class="hide">facebook</span></a></li>
-						<li><a href="http://gs25friend.blog.me/" class="blog" target="_blank"><span class="hide">blog</span></a></li>
-						<li><a href="https://instagram.com/fungs25/" class="instagram" target="_blank"><span class="hide">instagram</span></a></li>
-						<li><a href="http://tvcast.naver.com/gs25" class="tvcast" target="_blank"><span class="hide">tvcast</span></a></li>
-						<li><a href="https://www.youtube.com/channel/UCl0HemfAt7dShJRf59_cuGQ" class="youtube" target="_blank"><span class="hide">youtube</span></a></li>
-						<li><a href="http://www.pholar.co/my/855926/profile/post" class="pholar" target="_blank"><span class="hide">pholar</span></a></li>
-						<li><a href="https://story.kakao.com/ch/fungs25" class="kakaostroy" target="_blank"><span class="hide">카카오스토리</span></a></li>
+						<li><a href="https://www.keco.or.kr/kr/main/index.do" target="_blank"><span class="hide">facebook</span></a></li>
+						<li><a href="http://www.keiti.re.kr/home/index.do" class="blog" target="_blank"><span class="hide">blog</span></a></li>
+						<li><a href="http://kr.ecubelabs.com/integrated-waste-management/" class="instagram" target="_blank"><span class="hide">instagram</span></a></li>
+						<li><a href="http://kfem.or.kr/" class="tvcast" target="_blank"><span class="hide">tvcast</span></a></li>
+						<li><a href="http://www.greenfund.org/" class="youtube" target="_blank"><span class="hide">youtube</span></a></li>
+						<li><a href="http://www.greenpeace.org/korea/donate/" class="pholar" target="_blank"><span class="hide">pholar</span></a></li>
+						<li><a href="http://air.gg.go.kr/airgg/index.html" class="kakaostroy" target="_blank"><span class="hide">카카오스토리</span></a></li>
 					</ul>
 				</div>
 			</div>

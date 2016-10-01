@@ -32,9 +32,9 @@
 		var options = {
 			title : '일일 쓰레기 통계량', // 제목
 			width: 450, // 가로 px
-			height: 400, // 세로px
+			height: 500, // 세로px
 			bar : {
-				groupWidth: '80%' // 그래프 너비 설정 %
+				groupWidth: '60%' // 그래프 너비 설정 %
 			},
 			legend: {
 				position : 'none' // 항목 표시 여부 (현재 설정 안함)
@@ -88,7 +88,7 @@
 			<div id="chart_div"></div> <!-- 여기에 차트가 생성됩니다. div id="chart_div" 건들이지 말 것 -->
 		</div>
 		<div id="chart_right">
-			<div id="piechart_3d" style="width: 600px; height: 500px;"></div> <!-- piechart_3d 건들이지 말 것 -->
+			<div id="piechart_3d" style="width: 650px; height: 700px;"></div> <!-- piechart_3d 건들이지 말 것 -->
 		</div>
 	</div>
 </div>
