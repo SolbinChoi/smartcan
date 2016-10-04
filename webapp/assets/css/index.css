@@ -14,6 +14,9 @@
 #intro_main{
 	margin: 0 auto; width: 1200px;
 }
+#event_slide{
+	margin:30px 0 20px 160px;
+}
 a {color:#fff; text-decoration:none;}
 		.container_index {margin: 0 auto; width: 990px; text-align: center;}
 
@@ -93,6 +96,7 @@ a {color:#fff; text-decoration:none;}
 }
 #daily_wrap{
 	margin-top:100px;
+	margin-left:130px;
 	float:left;
 	text-align:right;
 }

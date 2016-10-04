@@ -82,7 +82,7 @@ margin-top : 50px;
 	margin-top:40px;
 	margin-bottom:20px;
 	background-color:rgb(138, 191, 80);
-	color:white;
+	color:#fff;
 }
 #text_wrap{
 	text-align:center;
@@ -128,7 +128,7 @@ margin-top : 50px;
 }
 .btn-primary {
     color: #000000;
-    background-color: #E6E6E7;
+    background-color: #fff;
     border:none;
     padding: 15px 25px;
     border-radius:30px;

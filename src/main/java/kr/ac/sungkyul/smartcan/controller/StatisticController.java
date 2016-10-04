@@ -17,6 +17,7 @@ public class StatisticController {
 	@Autowired
 	private StatisticService statisticService;
 	
+	// 통계량 
 	@RequestMapping("/statistic")
 	public String statistic(Model model){
 		

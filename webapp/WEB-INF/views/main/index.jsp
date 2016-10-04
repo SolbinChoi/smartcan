@@ -30,7 +30,7 @@
 <div id="intro_main">
 	<div id="intro_sub">
 
-				<div id="event_slide">
+			<div id="event_slide">
 			<div id="slideShowImages"> <!--  slideShowImages는 원하는 슬라이드 쇼 이미지를 가리키는 <img> 요소를 포함 -->
 		    <img src="/smartcan/assets/images/index/img1.jpg" alt="Slide 1" />
 		    <img src="/smartcan/assets/images/index/img2.JPG" alt="Slide 2" />
@@ -40,7 +40,7 @@
 			</div>  
 			<img src="/smartcan/assets/images/index/stop.png" id="slideShowButton"></img> <!-- Optional button element. -->
 			
-		</div>
+			</div>
 				
 			<div id="first_wrap">
 				<div id="fresh_photo">
@@ -76,7 +76,7 @@
 			
 				<div id="daily_wrap">
 					<p id="highlight">잦은 수거로 인한 이산화탄소가 줄어듭니다. </p>
-					<p id="highlight2"> 하루가 시작되고 잠깐의 휴식이 되어 머무르고, 하루의 마무리를 <br> 같이하는
+					<p id="highlight2"> 하루가 시작되고 잠깐의 휴식이 되어 머무르고, <br> 하루의 마무리를 같이하는
 					스마트 쓰레기통 <br>
 					</p>
 				</div>
@@ -103,7 +103,7 @@
 	   
 	 $('#slideShowButton').on("click", function(){
 	      var src = ($(this).attr("src") === "/smartcan/assets/images/index/stop.png") 
-	         ? "/smartcan/assets/images/index/start.png"
+	         ? "/smartcan/assets/images/index/play.png"
 	         : "/smartcan/assets/images/index/stop.png";
 	      $(this).attr("src", src);
 	   });

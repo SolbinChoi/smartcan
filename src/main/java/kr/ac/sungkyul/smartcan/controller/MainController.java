@@ -10,6 +10,7 @@ public class MainController {
 	public String main(){
 		return "/main/index";
 	}
+	// 회사 소개 폼 이동
 	@RequestMapping("/companyintro")
 	public String companyIntro(){
 		return "/main/companyintro";

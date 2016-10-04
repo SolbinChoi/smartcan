@@ -34,7 +34,7 @@
 			
 			<div class="gnbwrap">
 				<div class="gnbw">
-					<h1 class="logo"><a href="/smartcan/main">GS25</a></h1>
+					<h1 class="logo"><a href="/smartcan/main">Smart Can</a></h1>
 					<div class="gnb" id="gnb_menu">
 						<ul>
 						<li><h2><a href="/smartcan/board/customlist" class="on">고객센터</a></h2>
