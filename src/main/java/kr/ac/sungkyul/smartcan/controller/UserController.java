@@ -1,5 +1,7 @@
 package kr.ac.sungkyul.smartcan.controller;
 
+import java.util.Map;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -152,5 +154,14 @@ public class UserController {
 		//비밀번호 변경창으로 보냄
 		model.addAttribute("userno", no);
 		return "/user/repassword";
-		}
+	}
+	// 아이디 중복 검사
+	@ResponseBody	
+	@RequestMapping(value = "CheckEmail", method = RequestMethod.POST)
+	public Map<String, Object> checkEmail(String email) {	//Request 객체받음, script or DB 객체 분별
+		
+		Map<String, Object> map = userService.checkEmail(email);
+		
+		return map;
+	}
 }

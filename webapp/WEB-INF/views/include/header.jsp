@@ -37,15 +37,32 @@
 					<h1 class="logo"><a href="/smartcan/main">Smart Can</a></h1>
 					<div class="gnb" id="gnb_menu">
 						<ul>
-						<li><h2><a href="/smartcan/board/customlist" class="on">고객센터</a></h2>
+						<c:choose>
+						 <c:when test='${empty sessionScope.authUser }'>
+						<li><h2><a href="/smartcan/custom/list" class="on">고객센터</a></h2>
 						</li>
-						<li><h2><a href="/smartcan/board/advertise">광고문의</a></h2>
+						<li><h2><a href="/smartcan/adver/list">광고문의</a></h2>
 						</li>
 						<li><h2><a href="/smartcan/statistic/statistic">통계량</a></h2>
 						</li>
 						<li><h2><a href="/smartcan/map/list">검색</a></h2>
 						</li>
 						<li><h2><a href="/smartcan/companyintro">제품소개</a></h2>
+						</li>
+						</c:when>
+						<c:otherwise>
+						<li><h2><a href="/smartcan/custom/list" class="on">고객센터</a></h2>
+						</li>
+						<li><h2><a href="/smartcan/adver/list">광고문의</a></h2>
+						</li>
+						<li><h2><a href="/smartcan/statistic/statistic">통계량</a></h2>
+						</li>
+						<li><h2><a href="/smartcan/map/list">검색</a></h2>
+						</li>
+						<li><h2><a href="/smartcan/companyintro">제품소개</a></h2>
+						</li>
+						</c:otherwise>
+						</c:choose>
 						</ul>
 					</div>
 				</div>

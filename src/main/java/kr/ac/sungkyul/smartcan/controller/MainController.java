@@ -15,4 +15,8 @@ public class MainController {
 	public String companyIntro(){
 		return "/main/companyintro";
 	}
+	@RequestMapping("/test")
+	public String test(){
+		return "/main/test";
+	}
 }
