@@ -8,5 +8,6 @@
 	<mappers>
 		<mapper resource="mybatis/mappers/user.xml" />
 		<mapper resource="mybatis/mappers/custom_board.xml" />	
+		<mapper resource="mybatis/mappers/position_search.xml" />	
 	</mappers>
 </configuration>
