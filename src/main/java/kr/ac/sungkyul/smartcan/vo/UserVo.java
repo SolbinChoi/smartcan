@@ -9,8 +9,8 @@ public class UserVo {
 	private String gender;
 	private String address;
 	private String phone;
-	private Integer point;
 	private String position; // 직책
+	
 	public Long getNo() {
 		return no;
 	}
@@ -59,12 +59,7 @@ public class UserVo {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public Integer getPoint() {
-		return point;
-	}
-	public void setPoint(Integer point) {
-		this.point = point;
-	}
+	
 	public String getPosition() {
 		return position;
 	}
@@ -74,8 +69,8 @@ public class UserVo {
 	@Override
 	public String toString() {
 		return "UserVo [no=" + no + ", name=" + name + ", email=" + email + ", password=" + password + ", birth="
-				+ birth + ", gender=" + gender + ", address=" + address + ", phone=" + phone + ", point=" + point
-				+ ", position=" + position + "]";
+				+ birth + ", gender=" + gender + ", address=" + address + ", phone=" + phone + ", position=" + position
+				+ "]";
 	}
 	
 	

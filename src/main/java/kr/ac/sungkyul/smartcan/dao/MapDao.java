@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import kr.ac.sungkyul.smartcan.vo.MapBoardVo;
-import kr.ac.sungkyul.smartcan.vo.MapVo;
 
 /*
 2016-10-04 
@@ -19,6 +18,7 @@ import kr.ac.sungkyul.smartcan.vo.MapVo;
 
 @Repository
 public class MapDao {
+
 	@Autowired
 	private SqlSession sqlSession;
 
@@ -59,7 +59,7 @@ public class MapDao {
 	}
 	
 	//지도 리스트 가져오기
-	public List<MapVo> getList(String keyword, Long reno) {
+	public List<MapBoardVo> getList(String keyword, Long reno) {
 
 		Map<String, Object> map = new HashMap<>();
 	  	
@@ -67,7 +67,7 @@ public class MapDao {
 		if (keyword == null || "".equals(keyword)) {
 
 			map.put("reno", reno);
-			List<MapVo> list = sqlSession.selectList("search.getMapList", map);
+			List<MapBoardVo> list = sqlSession.selectList("search.getMapList", map);
 
 			return list;
 
@@ -75,27 +75,28 @@ public class MapDao {
 		} else {
 			
 			map.put("keyword", "%" + keyword + "%");
-			List<MapVo> list = sqlSession.selectList("search.getMapListKeyword", map);
+			List<MapBoardVo> list = sqlSession.selectList("search.getMapListKeyword", map);
 
 			return list;
 		}
 	}
 	
-	
 	//(안드로이드)지도 좌표 리스트
-		public List<MapVo> getPointList(){
-			
-			List<MapVo> list=sqlSession.selectList("search.getPointList");
-			return list;
-		}
+	public List<MapBoardVo> getPointList(){
 		
-
-		public void update(Long id,Double amount){
-			Map<String, Object> map = new HashMap<>();
-
-			map.put("id", id);
-			map.put("amount", amount);
-			sqlSession.update("search.update",map);
-		}
+		List<MapBoardVo> list=sqlSession.selectList("search.getPointList");
+		return list;
+	}
 	
+	public void update(Long id,Double amount){
+		Map<String, Object> map = new HashMap<>();
+
+		map.put("id", id);
+		map.put("amount", amount);
+		sqlSession.update("search.update",map);
+	}
+
+	
+
+
 }

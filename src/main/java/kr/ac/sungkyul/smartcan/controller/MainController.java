@@ -19,4 +19,12 @@ public class MainController {
 	public String test(){
 		return "/main/test";
 	}
+	@RequestMapping("/userManage")
+	public String userManage(){
+		return "/main/userManage";
+	}
+	@RequestMapping("/userdelete")
+	public String userManagedelete(){
+		return "redirect:/userManage";
+	}
 }

@@ -11,7 +11,7 @@
   -->
 
 <!--게시물 리스트 가져오기  -->
-	<select id="getList" parameterType="map" resultType="kr.ac.sungkyul.smartcan.vo.MapBoardVo">
+	<select id="getList" parameterType="map" resultType="mapvo">
    <![CDATA[
    select * from(
    	select c.*,rownum rn from(
@@ -24,7 +24,7 @@
    </select>
    
    	<!--검색된 게시물 리스트 가져오기  -->
-   	<select id="getListKeyword" parameterType="map" resultType="kr.ac.sungkyul.smartcan.vo.MapBoardVo">
+   	<select id="getListKeyword" parameterType="map" resultType="mapvo">
    <![CDATA[
  	select * from(
  		select c.*,rownum rn from(
@@ -44,51 +44,40 @@
    </select>
    
    <!-- 지도 리스트 가져오기 -->
-   	<select id="getMapList" parameterType="map" resultType="kr.ac.sungkyul.smartcan.vo.MapVo">
+   	<select id="getMapList" parameterType="map" resultType="mapvo">
    <![CDATA[
  	select no,
  		   name,
  		   localx,
  		   localy,
- 		   region_no as regionno from map where region_no=#{reno}
+ 		   region_no as regionno,amount from point where region_no=#{reno}
    ]]>
    </select>
     
     <!-- 검색된 지도 리스트 가져오기 -->
-   	<select id="getMapListKeyword" parameterType="map" resultType="kr.ac.sungkyul.smartcan.vo.MapVo">
+   	<select id="getMapListKeyword" parameterType="map" resultType="mapvo">
    <![CDATA[
  	select a.no,
  		   a.name,
  		   a.localx,
  		   a.localy,
- 		   a.region_no as regionno from map a, region b 
+ 		   a.region_no as regionno, a.amount from point a, region b 
     where a.REGION_NO=b.NO and (b.NAME like #{keyword} or a.NAME like #{keyword})
    ]]>
    </select>
    
    <!--(안드로이드) 지도 좌표 리스트 -->
-   <select id="getPointList" resultType="kr.ac.sungkyul.smartcan.vo.MapVo">
+   <select id="getPointList" resultType="mapvo">
     <![CDATA[
- select no,name,localx,localy,region_no as regionno,amount from map where rownum<=10
+ select no,name,address,localx,localy,region_no as regionno,amount from point
      ]]>
    </select>
    
-	<!--(안드로이드)검색된 좌표값 가져오기-->
-	<select id="getSearchlist" parameterType="map" resultType="kr.ac.sungkyul.smartcan.vo.MapVo">
+   <update id="update" parameterType="map">
 	    <![CDATA[
-	select a.no,
- 		   a.name,
- 		   a.localx,
- 		   a.localy,
- 		   a.region_no as regionno,amount from map a, region b 
-    where a.REGION_NO=b.NO and (b.NAME like #{keyword} or a.NAME like #{keyword})
-	     ]]>
-	</select>
-	
-	<update id="update" parameterType="map">
-	    <![CDATA[
-	    update map set amount=#{amount} where no=#{id}
+	    update point set amount=#{amount} where no=#{id}
 		     ]]>
 	
 	</update>
+   
 </mapper>

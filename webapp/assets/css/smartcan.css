@@ -4,7 +4,7 @@
 
 /* reset */
 *				{ margin:0; padding:0 }
-body			{ font:0.9em; font-family:NanumBarunGothic !important;}
+body, input			{ font:0.9em; font-family:NanumBarunGothic !important;}
 ul, ol, li			{ list-style-type: none }
 
 /* layout */

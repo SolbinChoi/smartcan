@@ -4,10 +4,13 @@
 	<typeAliases>
 	<typeAlias type="kr.ac.sungkyul.smartcan.vo.UserVo" alias="uservo"/>
 	<typeAlias type="kr.ac.sungkyul.smartcan.vo.PassLinkVo" alias="passlinkvo"/>
+	<typeAlias type="kr.ac.sungkyul.smartcan.vo.MapBoardVo" alias="mapvo"/>
+	
 	</typeAliases>
 	<mappers>
 		<mapper resource="mybatis/mappers/user.xml" />
 		<mapper resource="mybatis/mappers/custom_board.xml" />	
 		<mapper resource="mybatis/mappers/position_search.xml" />	
+		<mapper resource="mybatis/mappers/adver_board.xml" />
 	</mappers>
 </configuration>

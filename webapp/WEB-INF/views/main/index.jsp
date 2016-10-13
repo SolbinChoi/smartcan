@@ -7,7 +7,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
 <link href="/smartcan/assets/css/index.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="/smartcan/assets/js/jquery/jquery-1.9.0.js"></script>
 <script type="text/javascript" src="/smartcan/assets/js/slideShow.js"></script>
@@ -20,9 +19,38 @@
       border: 0.8em white solid;
       padding: 3px;
     }   
+    #STATICMENU { margin: 0pt; padding: 0pt;  position: absolute; right: 0px; top: 0px;}
   </style>
+
+<script type="text/javascript">
+var stmnLEFT = 230; // 오른쪽 여백 
+var stmnGAP1 = 20; // 위쪽 여백 
+var stmnGAP2 = 150; // 스크롤시 브라우저 위쪽과 떨어지는 거리 
+var stmnBASE = 150; // 스크롤 시작위치 
+var stmnActivateSpeed = 35; //스크롤을 인식하는 딜레이 (숫자가 클수록 느리게 인식)
+var stmnScrollSpeed = 23; //스크롤 속도 (클수록 느림)
+var stmnTimer; 
+
+function RefreshStaticMenu() { 
+ var stmnStartPoint, stmnEndPoint; 
+ stmnStartPoint = parseInt(document.getElementById('STATICMENU').style.top, 10); 
+ stmnEndPoint = Math.max(document.documentElement.scrollTop, document.body.scrollTop) + stmnGAP2; 
+ if (stmnEndPoint < stmnGAP1) stmnEndPoint = stmnGAP1; 
+ if (stmnStartPoint != stmnEndPoint) { 
+  stmnScrollAmount = Math.ceil( Math.abs( stmnEndPoint - stmnStartPoint ) / 15 ); 
+  document.getElementById('STATICMENU').style.top = parseInt(document.getElementById('STATICMENU').style.top, 10) + ( ( stmnEndPoint<stmnStartPoint ) ? -stmnScrollAmount : stmnScrollAmount ) + 'px'; 
+  stmnRefreshTimer = stmnScrollSpeed; 
+  }
+ stmnTimer = setTimeout("RefreshStaticMenu();", stmnActivateSpeed); 
+ } 
+function InitializeStaticMenu() {
+ document.getElementById('STATICMENU').style.right = stmnLEFT + 'px';  //처음에 오른쪽에 위치. left로 바꿔도.
+ document.getElementById('STATICMENU').style.top = document.body.scrollTop + stmnBASE + 'px'; 
+ RefreshStaticMenu();
+ }
+ </script>
 </head>
-<body>
+<body onload="InitializeStaticMenu();">
 <div id="container">
 <jsp:include page="/WEB-INF/views/include/header.jsp" />
 <div id="content">
@@ -41,7 +69,47 @@
 			<img src="/smartcan/assets/images/index/stop.png" id="slideShowButton"></img> <!-- Optional button element. -->
 			
 			</div>
-				
+			
+			<div id="STATICMENU">
+			<div class="myarea_wrap">
+			<div class="mymenu">
+				<div class="couwrap_off">
+					<p>
+					서비스 이용을<br>
+					위해 로그인<br>
+					해주세요 <br>
+					</p>
+					<input type="button" class="btn_log" value="로그인" onclick="location.href='/smartcan/user/loginform';">
+				</div>
+				<ul class="my_lst">
+					<li>
+						<a href="/smartcan/map/list" class="my_m0">검색</a>
+					</li>
+					<li>
+						<a href="/smartcan/custom/list" class="my_m1">고객센터</a>
+					</li>
+					<li>
+						<a href="/smartcan/adver/list" class="my_m2">광고문의</a>
+					</li>
+					<li>
+						<a href="/smartcan/location" class="my_m3">찾아오시는 길</a>
+					</li>
+				</ul>
+				<div class="menuwrap">
+				<p class="menu_tit">관리자 메뉴</p>
+				<ul class="my_lst">
+					<li>
+						<a href="/smartcan/userManage" class="my_m4">회원관리</a>
+					</li>
+				</ul>
+				</div>
+			</div>
+			<a href="#" class="top">TOP</a>
+			</div>
+			</div>
+			
+			
+			
 			<div id="first_wrap">
 				<div id="fresh_photo">
 					<img src="/smartcan/assets/images/index/path.png" width=450px />
@@ -98,15 +166,32 @@
 <jsp:include page="/WEB-INF/views/include/footer.jsp" />
 </div>
 </body>
-<script>
+<script type= "text/javascript">
+
  $(function() {
-	   
+	 
 	 $('#slideShowButton').on("click", function(){
 	      var src = ($(this).attr("src") === "/smartcan/assets/images/index/stop.png") 
 	         ? "/smartcan/assets/images/index/play.png"
 	         : "/smartcan/assets/images/index/stop.png";
 	      $(this).attr("src", src);
 	   });
+	 
+	 $( window ).scroll( function() {
+         if ( $( this ).scrollTop() > 200 ) {
+           $( '.top' ).fadeIn();
+         } else {
+           $( '.top' ).fadeOut();
+         }
+       } );
+       $( '.top' ).click( function() {
+         $( 'html, body' ).animate( { scrollTop : 0 }, 400 );
+         return false;
+       } );
+       
+       
 }); 
-</script>
+
+ </script>
+
 </html>

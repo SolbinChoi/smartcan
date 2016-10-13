@@ -16,6 +16,7 @@ public class CustomBoardVo {
 	private String keyword;
 	private String category;
 	private String imageurl;
+	
 	public Long getNo() {
 		return no;
 	}

@@ -23,7 +23,7 @@
 			<div id="customBoard_main">
 				<div id="customBoard_sub">
 					<div id="wrap">
-						<h1>고객센터</h1>
+						<h1>광고문의</h1>
 					</div>
 
 					<div id="board" class="board-form">
@@ -44,18 +44,18 @@
 							</tr>
 							<tr>
 								<td class="label">첨부파일</td>
-							<td id="attachFile" data-fno="${attachFileVO.fNO }">${attachFileVO.orgName }</td>
+							<td id="attachFile" data-fno="${AttachFileAdVO.fNO }">${AttachFileAdVO.orgName }</td>
 							</tr>
 						</table>
-						<img alt="이미지 없음" src="download?fNO=${attachFileVO.fNO }" width=200px; height="200px">
+						<img id="adver_img" src="${AttachFileAdVO.imageurl }" width=200px; height="200px">
 				<div id="cma_image" style="width:95%; max-width:100%; border:1px solid #c0c0c0;">
 				</div>
 						<div class="bottom">
-							<a href="/smartcan/custom/list">글목록</a>
+							<a href="/smartcan/adver/list">글목록</a>
 							<c:if test='${not empty authUser }'>
-								<a href="/smartcan/custom/replyform?no=${vo.no }">답글달기</a>
-								<c:if test='${authUser.no == vo.userNo }'>
-									<a href="/smartcan/custom/modifyform?no=${vo.no}">글수정</a>
+								<a href="/smartcan/adver/replyform?no=${vo.no }">답글달기</a>
+								<c:if test='${authUser.no == vo.user_no }'>
+									<a href="/smartcan/adver/modifyform?no=${vo.no}">글수정</a>
 								</c:if>
 							</c:if>
 						</div>
