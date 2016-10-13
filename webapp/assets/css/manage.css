@@ -7,7 +7,7 @@
 
 
 #tap_content {
-    width: 800px;
+    width: 930px;
     height:500px;
     margin: 50px auto;
 }
@@ -45,7 +45,7 @@ ul.tabs li.active {
     border-top: none;
     clear: both;
     float: left;
-    width: 800px;
+    width: 930px;
     background: #FFFFFF;
 }
 .tab_content {
@@ -89,4 +89,34 @@ h4{
 	font-size:1.1em; 
 	background-color:#00A5FF;
 	color:#FFFFFF
+}
+a.del	{
+	display:block;
+	width:20px;
+	height:20px; 
+	background:url("/smartcan/assets/images/manage/delete.png") no-repeat 0 0;
+	font-size:0;
+}
+div.pager {
+    width: 850px;
+    float: left;
+    text-align: center;
+}
+div.pager ul {
+    height: 20px;
+    margin: 50px 0 30px 80px;
+}
+div.pager ul li {
+    display: inline-block;
+    margin: 5px 3px;
+    width: 20px;
+    font-weight: bold;
+}
+div.pager ul li a, div.pager ul li a:visited, div.pager ul li a:link, div.pager ul li a:active {
+    text-decoration: none;
+    color: #ff8080;
+}
+div.pager ul li.selected {
+    text-decoration: underline;
+    color: #f00;
 }

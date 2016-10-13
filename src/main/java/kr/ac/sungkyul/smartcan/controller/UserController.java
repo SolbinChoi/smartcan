@@ -67,6 +67,7 @@ public class UserController {
 			session.setAttribute("authUser",authUser);
 			result = "true";
 		}
+		
 		return result;
 			
 		}

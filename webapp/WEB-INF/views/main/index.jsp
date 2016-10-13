@@ -23,9 +23,9 @@
   </style>
 
 <script type="text/javascript">
-var stmnLEFT = 230; // 오른쪽 여백 
+var stmnLEFT = 200; // 오른쪽 여백 
 var stmnGAP1 = 20; // 위쪽 여백 
-var stmnGAP2 = 150; // 스크롤시 브라우저 위쪽과 떨어지는 거리 
+var stmnGAP2 = 200; // 스크롤시 브라우저 위쪽과 떨어지는 거리 
 var stmnBASE = 150; // 스크롤 시작위치 
 var stmnActivateSpeed = 35; //스크롤을 인식하는 딜레이 (숫자가 클수록 느리게 인식)
 var stmnScrollSpeed = 23; //스크롤 속도 (클수록 느림)
@@ -70,6 +70,7 @@ function InitializeStaticMenu() {
 			
 			</div>
 			
+			
 			<div id="STATICMENU">
 			<div class="myarea_wrap">
 			<div class="mymenu">
@@ -96,12 +97,19 @@ function InitializeStaticMenu() {
 					</li>
 				</ul>
 				<div class="menuwrap">
-				<p class="menu_tit">관리자 메뉴</p>
-				<ul class="my_lst">
-					<li>
-						<a href="/smartcan/userManage" class="my_m4">회원관리</a>
-					</li>
-				</ul>
+				<c:choose>
+					<c:when test='${authUser.no ==1 }'>
+					<p class="menu_tit">관리자 메뉴</p>
+					<ul class="my_lst">
+						<li>
+							<a href="/smartcan/userManage" class="my_m4">회원관리</a>
+						</li>
+					</ul>
+					</c:when>
+					<c:otherwise>
+					<p class="menu_tit">반가워요</p>
+					</c:otherwise>
+				</c:choose>
 				</div>
 			</div>
 			<a href="#" class="top">TOP</a>

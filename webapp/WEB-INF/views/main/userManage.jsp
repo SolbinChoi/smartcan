@@ -19,13 +19,19 @@
 		
 			<div id="tap_content">
 			    <ul class="tabs">
-			        <li class="active" rel="tab1">회원관리</li>
+			        <li class="active" rel="tab1">
+			        	<a href="/smartcan/userManage">회원관리</a></li>
 			        <li rel="tab2">테스트</li>
 			    </ul>
 			    <div class="tab_container">
 			        <div id="tab1" class="tab_content">
+			        	<form id="search_form" action="/smartcan/userManage" method="get">
+							<input type="text" id="kwd" name="kwd" value="${map.keyword }">
+							<input type="submit" value="찾기">
+						</form>
+						
 			        	<h4>
-							전체 회원수 : <span></span>
+							전체 회원수 : <span>${map.totalCount }</span>
 						</h4>
 						
 						<table class="tbl-ex">
@@ -39,23 +45,31 @@
 
 
 							</tr>
-						</table>
 						
-						<c:set var="firstIndex"
+						<c:set var="countList"
 								value="${map.totalCount - (map.currentPage - 1)*map.sizeList }" />
 						<c:forEach var='vo' items='${map.list}' varStatus='status'>
 							<tr>
-							<td>${countList - s.index }</td>
+							<td>${countList - status.index }</td>
 							<td>${vo.email }</td>
 							<td>${vo.name }</td>
 							<td>${vo.phone }</td>
 							<td>${vo.position }</td>
-							<td><c:if test='${vo.position == "관리자" }'>
-							<a href="/smartcan/userdelete?no=${vo.no}" class="del">삭제</a>
-							</c:if></td>
+							<td>
+							<!-- <c:choose>
+								<c:when test='${authUser.no==1 }'>
+								<a href="/smartcan/userdelete?no=${vo.no}" class="del">삭제</a>
+								</c:when>
+								
+								<c:otherwise>
+									&nbsp;
+								</c:otherwise>
+							</c:choose> -->
+							&nbsp;
+							</td>
 							</tr>
 						</c:forEach>
-						
+						</table>
 						
 			            <ul>
 			                <li><a href="#">이것은 두 번째 탭의</a>
@@ -63,9 +77,51 @@
 			                <li><a href="#">이것은 두 번째 탭의</a>
 			                </li>
 			            </ul>
+			            
+			            <!-- begin:paging -->
+							<div class="pager">
+								<ul>
+
+									<c:if test="${map.prevtoPage >= 0 }">
+										<li><a href="/smartcan/userManage?p=${map.prevtoPage }">◀◀</a></li>
+									</c:if>
+
+									<c:if test="${map.prevPage >= 0 }">
+										<li><a href="/smartcan/userManage?p=${map.prevPage }">◀</a></li>
+									</c:if>
+
+									<c:forEach begin='${map.firstPage }' end='${map.lastPage }'
+										step='1' var='i'>
+										<c:choose>
+											<c:when test='${map.currentPage == i }'>
+												<li class="selected">${i }</li>
+											</c:when>
+											<c:when test='${i > map.pageCount }'>
+												<li>${i }</li>
+											</c:when>
+											<c:otherwise>
+												<li><a href="/smartcan/userManage?p=${i }">${i }</a></li>
+											</c:otherwise>
+										</c:choose>
+									</c:forEach>
+
+									<c:if test='${map.nextPage > 0 }'>
+										<li><a href="/smartcan/userManage?p=${map.nextPage }">▶</a></li>
+									</c:if>
+									<c:if test='${map.nexttoPage > 0 }'>
+										<li><a href="/smartcan/userManage?p=${map.nexttoPage }">▶▶</a></li>
+									</c:if>
+
+								</ul>
+							</div>
+			            
+			            
+			            
 			        </div>
 			
-			        <div id="tab2" class="tab_content">테스트</div>
+			        <div id="tab2" class="tab_content">
+			        	관리할 것 ?
+			        </div>
 			    </div>
 			</div>
 			

@@ -12,5 +12,6 @@
 		<mapper resource="mybatis/mappers/custom_board.xml" />	
 		<mapper resource="mybatis/mappers/position_search.xml" />	
 		<mapper resource="mybatis/mappers/adver_board.xml" />
+		<mapper resource="mybatis/mappers/manage.xml" />
 	</mappers>
 </configuration>
