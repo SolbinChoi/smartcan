@@ -35,7 +35,7 @@ function getThumbnailPrivew(html, $target) {
 			<div id="customBoard_main">
 			<div id="customBoard_sub">
 				<div id="wrap">
-					<h1>고객센터</h1>
+					<h1>광고문의</h1>
 				</div>
 
 

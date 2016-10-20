@@ -28,7 +28,7 @@ public class StatisticDao {
 		return conn;
 	}
 	
-	
+	// 안양 쓰레기양
 	public Long getAnyang(){
 		Long anyang = 0L;
 		Connection conn = null;
@@ -40,7 +40,7 @@ public class StatisticDao {
 			conn = getConnection();
 			
 			
-			String sql = "select sum(amount) from (select c.amount, d.region_no from (select a.amount,b.name,b.map_no from dailystatistic a, point b where a.point_no = b.no) c, map d where c.map_no = d.no) e where e.region_no = 3";
+			String sql = "select sum(amount) from (select a.amount, b.name, b.region_no from DAILYSTATISTIC a, point b where a.point_no = b.no) c where c.region_no = 2";
 
 			pstmt = conn.prepareStatement(sql);
 
@@ -67,7 +67,6 @@ public class StatisticDao {
 				System.out.println("error : " + e);
 			}
 		}
-		System.out.println(anyang);
 		return anyang;
 	}
 	public Long getIncheon(){
@@ -80,7 +79,7 @@ public class StatisticDao {
 			conn = getConnection();
 			
 			
-			String sql = "select sum(amount) from (select c.amount, d.region_no from (select a.amount,b.name,b.map_no from dailystatistic a, point b where a.point_no = b.no) c, map d where c.map_no = d.no) e where e.region_no = 2";
+			String sql = "select sum(amount) from (select a.amount, b.name, b.region_no from DAILYSTATISTIC a, point b where a.point_no = b.no) c where c.region_no = 3";
 
 			pstmt = conn.prepareStatement(sql);
 
@@ -121,7 +120,7 @@ public class StatisticDao {
 			conn = getConnection();
 			
 			
-			String sql = "select sum(amount) from (select c.amount, d.region_no from (select a.amount,b.name,b.map_no from dailystatistic a, point b where a.point_no = b.no) c, map d where c.map_no = d.no) e where e.region_no = 1";
+			String sql = "select sum(amount) from (select a.amount, b.name, b.region_no from DAILYSTATISTIC a, point b where a.point_no = b.no) c where c.region_no = 1";
 
 			pstmt = conn.prepareStatement(sql);
 
@@ -160,7 +159,7 @@ public class StatisticDao {
 			conn = getConnection();
 			
 			
-			String sql = "select count(*) from (select c.name, d.no, d.name from ( select a.name, b.region_no from point a, map b where a.map_no = b.no) c, region d where c.region_no = d.no) e where e.no=3";
+			String sql = "select count(*) from (select * from point) a where a.region_no = 2";
 
 			pstmt = conn.prepareStatement(sql);
 
@@ -199,7 +198,7 @@ public class StatisticDao {
 			conn = getConnection();
 			
 			
-			String sql = "select count(*) from (select c.name, d.no, d.name from ( select a.name, b.region_no from point a, map b where a.map_no = b.no) c, region d where c.region_no = d.no) e where e.no=2";
+			String sql = "select count(*) from (select * from point) a where a.region_no =3";
 
 			pstmt = conn.prepareStatement(sql);
 
@@ -238,7 +237,7 @@ public class StatisticDao {
 			conn = getConnection();
 			
 			
-			String sql = "select count(*) from (select c.name, d.no, d.name from ( select a.name, b.region_no from point a, map b where a.map_no = b.no) c, region d where c.region_no = d.no) e where e.no=1";
+			String sql = "select count(*) from (select * from point) a where a.region_no = 1";
 
 			pstmt = conn.prepareStatement(sql);
 

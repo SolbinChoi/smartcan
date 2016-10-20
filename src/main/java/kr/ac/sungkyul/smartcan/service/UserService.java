@@ -169,6 +169,7 @@ public class UserService {
 			userDao.setState(no, state); //state 설정
 				
 			Integer resultInt = userDao.setPass(no,password); //result 반환
+			System.out.println("service "+resultInt);
 			String result = String.valueOf(resultInt); // String 변환
 			return result;
 		}

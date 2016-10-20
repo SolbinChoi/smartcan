@@ -50,40 +50,20 @@ div {
     background: #397ca8;
     padding: 6px 16px;
 }
-/* 움직이는 메뉴바 */
 
 
-
-.myarea_wrap {
-	z-index: 100;
-	left: 50%;
-    margin-left: 470px;
-	
-	}
-.my_lst {
-    overflow: hidden;
+#main_top{
+	margin-top:2px;
+	margin-bottom:20px;
+	text-align:center;
 }
-a.my_m0 {
-    background-position: 50% -308px;
-    background: url(/smartcan/assets/images/index/Rotten.png) no-repeat;
-        margin: 20px;
+#first_wrap{
+	width:1200px;
+	margin-left:50px;
+	margin-bottom:20px;
+	float:left;
 }
-
-a.my_m1 {
-    background-position: 50% 14px;
-    background: url(/smartcan/assets/images/index/sakura.png) no-repeat;
-     margin: 20px;
-}
-a.my_m2 {
-    background-position: 50% -55px;
-    background: url(/smartcan/assets/images/index/ice.png) no-repeat;
-    margin: 20px;
-}
-a.my_m3{
-	 background: url(/smartcan/assets/images/index/rainbow.png) no-repeat;
-    margin: 17px;
-}
-a {color:#fff; text-decoration:none;}
+#ban1 a, #ban2 a {color:#fff; text-decoration:none;}
 		.container_index {margin: 0 auto; width: 990px; text-align: center;}
 
         .markey_list_sub{margin-left:13px;}
@@ -100,49 +80,6 @@ a {color:#fff; text-decoration:none;}
 		.market_list_point{clear:both; overflow: hidden; margin: 0px 0 8px; padding-left: 0px;}	
 
 		.line_dfdfdf {background-color: #397ca8 ; height: 4px; margin-bottom: 8px;}
-.my_lst a {
-    display: block;
-    padding-top: 33px;
-    line-height: 38px;
-    text-align: center;
-    font-size: 11px;
-    color: #666;
-}
-.myarea_wrap .menuwrap {
-    overflow: hidden;
-    background: #fff;
-}
-.myarea_wrap .menu_tit {
-    background: #666;
-    font-size: 11px;
-    text-align: center;
-    color: #fff;
-    padding: 10px 0px;
-}
-
-.myarea_wrap .top {
-	display: block;
-	background: #fff;
-	border: 1px solid #999999;
-	text-align: center;
-	font-weight: bold;
-	color: #222;
-	margin-top: 5px;
-	padding: 8px 0px 7px;
-}
-
-#main_top{
-	margin-top:2px;
-	margin-bottom:20px;
-	text-align:center;
-}
-#first_wrap{
-	width:1200px;
-	margin-left:50px;
-	margin-bottom:20px;
-	float:left;
-}
-
 #about_top{
 	margin-left:60px;
 }

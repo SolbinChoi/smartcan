@@ -427,7 +427,7 @@ input[type=text], input[type=password] {
     padding: 25px 0 40px;
     border-top: 1px solid #6c6c6c;
     border-bottom: 1px solid #e0e0e0;
-    background: #fbfbfb url("/smartcan/assets/images/login/smartcan_store.png") 60px no-repeat;
+    background: #fbfbfb url("/smartcan/assets/images/login/collection.png") 58px no-repeat;
 }
 #goMain{
 	margin: 40px 0 0 480px;	

@@ -67,7 +67,15 @@ h4{
 
 	margin-bottom:30px;
 }
-
+#search-btn {
+        position: relative;
+    width: 37px;
+    height: 27px;
+    text-align: center;
+    background: #397ca8;
+    color: #fff;
+    font-size: 16px;
+}
 .tbl-ex		{
 	width:95%;
 	

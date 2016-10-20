@@ -15,12 +15,18 @@ public class StatisticService {
 	private StatisticDao statisticDao;
 	
 	public Map<String, Object> getList(){
+		
+		// 지역별 총 쓰레기양
 		Long anyang = statisticDao.getAnyang();
 		Long incheon = statisticDao.getIncheon();
 		Long seoul = statisticDao.getSeoul();
+		
+		// 지역별 쓰레기통 수
 		Long anyangCount = statisticDao.getAnyangCount();
 		Long incheonCount = statisticDao.getIncheonCount();
 		Long seoulCount = statisticDao.getSeoulCount();
+		
+		
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("anyang", anyang);
 		map.put("incheon", incheon);
@@ -28,6 +34,7 @@ public class StatisticService {
 		map.put("anyangCount", anyangCount);
 		map.put("incheonCount", incheonCount);
 		map.put("seoulCount", seoulCount);
+		
 		return map;
 	}
 	

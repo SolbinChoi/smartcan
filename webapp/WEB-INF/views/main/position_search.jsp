@@ -5,7 +5,7 @@
 <!doctype html>
 <html>
 <head>
-<title>GS25</title>
+<title>SmartCan</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link href="/smartcan/assets/css/map.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=58419160bc8ff11be1b0bd521678c6ac"></script>
@@ -14,7 +14,7 @@
 <script>
 $(function(){
 
-if('${map.keyword}'=='서울' || '${map.keyword}'== '서울역' || '${map.keyword}'== 'GS25서울역점'  || '${map.keyword}'== '' ){	
+if('${map.keyword}'=='서울' || '${map.keyword}'== '서울역' || '${map.keyword}'== '광화문'  || '${map.keyword}'== '' ){	
 	
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 mapOption = { 
@@ -24,7 +24,7 @@ mapOption = {
 
 var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
-}else if('${map.keyword}'=='인천' || '${map.keyword}'=='GS25래미안아파트점' || '${map.keyword}'=='래미안아파트' ){	
+}else if('${map.keyword}'=='인천' || '${map.keyword}'=='부평' || '${map.keyword}'=='상동' ){	
 	
 	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 	mapOption = { 
@@ -33,7 +33,7 @@ var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니�
 	};
 
 	var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-	}else if('${map.keyword}'=='안양' || '${map.keyword}'=='GS25성결점' || '${map.keyword}'=='성결대' ){	
+	}else if('${map.keyword}'=='안양' || '${map.keyword}'=='성결' || '${map.keyword}'=='성결대' ){	
 	
 	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 	mapOption = { 

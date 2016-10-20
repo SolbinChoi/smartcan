@@ -41,22 +41,9 @@ public class MainController {
 		model.addAttribute("map", map);
 		return "/main/userManage";
 	}
-	@RequestMapping("/userdelete")
-	public String userManagedelete(HttpSession session,
-			@RequestParam("no") Long user_no){
-		
-		if (session == null) {
-			return "redirect:/main";
-		}
-
-		//사용자 세션 정보 얻어오기
-		UserVo authUser = (UserVo) session.getAttribute("authUser");
-		if (authUser == null) {
-			return "redirect:/main";
-		}
-		
-		mainService.deleteUser(user_no);
-		return "redirect:/main";
+	@RequestMapping("/location")
+	public String location(){
+		return "/main/location";
 	}
 
 }

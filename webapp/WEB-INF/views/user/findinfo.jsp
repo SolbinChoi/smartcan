@@ -8,7 +8,6 @@
 <link href="/smartcan/assets/css/login.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<body>
 	<jsp:include page="/WEB-INF/views/include/header.jsp" />
 	<div class="container">
 		<div id="title1">

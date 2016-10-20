@@ -70,6 +70,7 @@
    <select id="getPointList" resultType="mapvo">
     <![CDATA[
  select no,name,address,localx,localy,region_no as regionno,amount from point
+WHERE AMOUNT>=80
      ]]>
    </select>
    

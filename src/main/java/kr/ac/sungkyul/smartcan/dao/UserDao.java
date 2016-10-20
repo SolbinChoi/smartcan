@@ -94,6 +94,7 @@ public class UserDao {
 		passlinkvo.setUser_no(user_no);
 		passlinkvo.setState(state);
 		sqlSession.update("user.setState",passlinkvo);
+		System.out.println("setState 지남");
 	}
 	
 	// email 유효성 검사

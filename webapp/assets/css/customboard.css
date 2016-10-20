@@ -51,7 +51,8 @@
 	 }
 
 
-#search_form { width:800px; margin:50px auto 20px auto; text-align:center; 	 
+#search_form { width:800px;     margin-left: 80px;
+ text-align:center; 	 
 }
 
 input[type="text"]	{ padding:5px; border:1px solid #aaa; 

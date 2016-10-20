@@ -8,8 +8,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="/smartcan/assets/css/index.css" rel="stylesheet" type="text/css">
+<link href="/smartcan/assets/css/menubar.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="/smartcan/assets/js/jquery/jquery-1.9.0.js"></script>
 <script type="text/javascript" src="/smartcan/assets/js/slideShow.js"></script>
+<script type="text/javascript" src="/smartcan/assets/js/menubar.js"></script>
 <style>
     #slideShowImages { /* css  */
       border: 1px #f7f7f7 solid;
@@ -19,38 +21,11 @@
       border: 0.8em white solid;
       padding: 3px;
     }   
-    #STATICMENU { margin: 0pt; padding: 0pt;  position: absolute; right: 0px; top: 0px;}
+    #STATICMENU { margin: 0 150px; padding: 0pt;  position: absolute; right: 0px; top: 0px;}
   </style>
 
-<script type="text/javascript">
-var stmnLEFT = 200; // 오른쪽 여백 
-var stmnGAP1 = 20; // 위쪽 여백 
-var stmnGAP2 = 200; // 스크롤시 브라우저 위쪽과 떨어지는 거리 
-var stmnBASE = 150; // 스크롤 시작위치 
-var stmnActivateSpeed = 35; //스크롤을 인식하는 딜레이 (숫자가 클수록 느리게 인식)
-var stmnScrollSpeed = 23; //스크롤 속도 (클수록 느림)
-var stmnTimer; 
-
-function RefreshStaticMenu() { 
- var stmnStartPoint, stmnEndPoint; 
- stmnStartPoint = parseInt(document.getElementById('STATICMENU').style.top, 10); 
- stmnEndPoint = Math.max(document.documentElement.scrollTop, document.body.scrollTop) + stmnGAP2; 
- if (stmnEndPoint < stmnGAP1) stmnEndPoint = stmnGAP1; 
- if (stmnStartPoint != stmnEndPoint) { 
-  stmnScrollAmount = Math.ceil( Math.abs( stmnEndPoint - stmnStartPoint ) / 15 ); 
-  document.getElementById('STATICMENU').style.top = parseInt(document.getElementById('STATICMENU').style.top, 10) + ( ( stmnEndPoint<stmnStartPoint ) ? -stmnScrollAmount : stmnScrollAmount ) + 'px'; 
-  stmnRefreshTimer = stmnScrollSpeed; 
-  }
- stmnTimer = setTimeout("RefreshStaticMenu();", stmnActivateSpeed); 
- } 
-function InitializeStaticMenu() {
- document.getElementById('STATICMENU').style.right = stmnLEFT + 'px';  //처음에 오른쪽에 위치. left로 바꿔도.
- document.getElementById('STATICMENU').style.top = document.body.scrollTop + stmnBASE + 'px'; 
- RefreshStaticMenu();
- }
- </script>
 </head>
-<body onload="InitializeStaticMenu();">
+<body>
 <div id="container">
 <jsp:include page="/WEB-INF/views/include/header.jsp" />
 <div id="content">
@@ -70,7 +45,7 @@ function InitializeStaticMenu() {
 			
 			</div>
 			
-			
+			<div id="menubar">
 			<div id="STATICMENU">
 			<div class="myarea_wrap">
 			<div class="mymenu">
@@ -93,7 +68,7 @@ function InitializeStaticMenu() {
 						<a href="/smartcan/adver/list" class="my_m2">광고문의</a>
 					</li>
 					<li>
-						<a href="/smartcan/location" class="my_m3">찾아오시는 길</a>
+						<a href="/smartcan/location" class="my_m3">오시는 길</a>
 					</li>
 				</ul>
 				<div class="menuwrap">
@@ -115,7 +90,7 @@ function InitializeStaticMenu() {
 			<a href="#" class="top">TOP</a>
 			</div>
 			</div>
-			
+			</div>
 			
 			
 			<div id="first_wrap">
@@ -136,7 +111,7 @@ function InitializeStaticMenu() {
 				</div>
 				<div id=about_bottom>
 							<div id="ban2">
-							<a href="/smartcan/board/customlist">
+							<a href="/smartcan/custom/list">
 							<span><h3>Smart tash can board</h3></span>
 							<span>"스마트 쓰레기통의 불편한점이 있었나요?" <br>
 							"여기를 클릭하세요."

@@ -20,6 +20,9 @@
 	<jsp:include page="/WEB-INF/views/include/header.jsp" />
 	<div class="container">
 		<h3 id="tlt1">Smart Can</h3>
+
+		
+		
 		<div id="contents">
 			<div id="user">
 				<div id="log-border">
@@ -94,4 +97,5 @@ $(function() {
 	});
 });
 </script>
+
 </html>
