@@ -3,14 +3,14 @@ package kr.ac.sungkyul.smartcan.vo;
 public class AttachFileAdVO {
 	
 	private Long fNO; // FK
-	private Long no; // PK
-	private String path;
-	private String orgName;
+	private Long no; // PK (첨부파일 번호)
+	private String path; // 경로
+	private String orgName; 
 	private String saveName;
 	private long fileSize;
 	private String imageurl;
-	private Integer groupno;
-	private Integer orderno;
+	private Integer groupno; // 그룹 번호
+	private Integer orderno; // 그룹 내 순서
 	
 	
 	public Long getfNO() {

@@ -1,7 +1,7 @@
 @CHARSET "UTF-8";
 @import "smartcan.css";
 
-
+/*차트 css */
 #main_chart{
 	margin: 0 auto; width: 1200px;
 }

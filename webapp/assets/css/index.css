@@ -1,6 +1,7 @@
 @CHARSET "UTF-8";
 @import "smartcan.css";
 
+/* 메인 css */
 div {
     display: block;
 }
@@ -81,10 +82,10 @@ div {
 
 		.line_dfdfdf {background-color: #397ca8 ; height: 4px; margin-bottom: 8px;}
 #about_top{
-	margin-left:60px;
+	margin-left:64px
 }
 #about_bottom{
-	margin-left:60px;
+	margin-left:64px;
 }
 #ban_wrap{
 	margin-bottom:20px;
@@ -120,7 +121,8 @@ div {
 
 #fresh_photo{
 	float:left;
-	margin-left:60px;
+	margin-left:120px;
+	margin-top:10px;
 }
 #end_wrap{
 	width:1200px;

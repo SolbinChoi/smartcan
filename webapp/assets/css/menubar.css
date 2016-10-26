@@ -3,7 +3,7 @@
 
 /* 움직이는 메뉴바 */
 .mymenu {
-    width: 90px;
+    width: 95px;
     border: 1px solid #dfdfdf;
     background: #fff;
 }
@@ -61,7 +61,7 @@ a.my_m3{
     margin: 17px;
 }
 a.my_m4{
-	background: url(/smartcan/assets/images/index/set.png) no-repeat;
+	background: url(/smartcan/assets/images/index/Cheese-50.png) no-repeat;
     margin: 19px;
 }
 a {color:#333; text-decoration:none;}

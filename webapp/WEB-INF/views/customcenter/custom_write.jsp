@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>smartcan_write</title>
+<title>SmartCan 고객센터</title>
 <link href="/smartcan/assets/css/customboard.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="/smartcan/assets/js/jquery/jquery-1.9.0.js"></script>
 

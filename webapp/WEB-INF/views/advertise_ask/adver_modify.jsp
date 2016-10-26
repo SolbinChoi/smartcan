@@ -21,8 +21,10 @@
 			<div id="customBoard_main">
 				<div id="customBoard_sub">
 					<div id="wrap">
-						<h1>고객센터</h1>
+						<h1>광고문의</h1>
 					</div>
+					
+					<!-- 수정 폼 -->
 					<div id="board">
 						<form class="board-form" method="post"
 							action="/smartcan/custom/modify?no=${vo.no }">

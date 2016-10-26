@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>회원가입 폼</title>
 <link href="/smartcan/assets/css/login.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="/smartcan/assets/css/sweetalert.css">
 <script type="text/javascript" src="/smartcan/assets/js/jquery/jquery-1.9.0.js"></script>

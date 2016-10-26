@@ -3,12 +3,12 @@ package kr.ac.sungkyul.smartcan.vo;
 public class AdverBoardVo {
 	private Long no;
 	private String title;
-	private String content;
-	private Integer view_count;
-	private Integer group_no;
-	private Integer order_no;
+	private String content; // 내용
+	private Integer view_count; // 조회 수
+	private Integer group_no; // 그룹 번호
+	private Integer order_no; // 그룹 내 순서
 	private Integer depth;
-	private String reg_date;
+	private String reg_date; // 등록일
 	private Long user_no;
 	private String imageurl;
 	private String name; // 작성자 이름

@@ -1,15 +1,15 @@
 package kr.ac.sungkyul.smartcan.vo;
 
 public class AttachFileVO {
-	private Long fNO;
-	private Long no;
+	private Long fNO; // FK
+	private Long no; // PK
 	private String path;
 	private String orgName;
 	private String saveName;
 	private long fileSize;
 	private String imageurl;
-	private int groupno;
-	private int orderno;
+	private int groupno; // 그룹 번호
+	private int orderno; // 그룹 내 순서
 	
 	public Long getfNO() {
 		return fNO;

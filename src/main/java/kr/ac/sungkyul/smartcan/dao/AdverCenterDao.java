@@ -10,6 +10,11 @@ import org.springframework.stereotype.Repository;
 
 import kr.ac.sungkyul.smartcan.vo.AdverBoardVo;
 import kr.ac.sungkyul.smartcan.vo.AttachFileAdVO;
+/*
+2016-10-14
+ 작업자 : 최솔빈
+ 개발 상황 : 완료
+*/
 
 @Repository
 public class AdverCenterDao {

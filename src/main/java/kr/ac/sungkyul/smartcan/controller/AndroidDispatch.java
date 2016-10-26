@@ -32,20 +32,16 @@ public class AndroidDispatch {
 		return list;
 	}
 	
+	// Wifi 코드 전송
 	@RequestMapping(value="/getJsonWiFi", method=RequestMethod.GET)
 	@ResponseBody
 	public String WiFi(HttpServletRequest request,
 			@RequestParam("id") Long id,
 			@RequestParam("amount") double amount){
-		
+		// 랜덤 값 생성
 		String result="Code = [" + RandomStringUtils.randomAlphanumeric(10) + "]";
 		mapservice.update(id,amount);
 		return result;
-	
-		
-		
-	}
-	
-	
 
+	}
 }

@@ -6,6 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<title>SmartCan 통계차트</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="/smartcan/assets/css/statistic.css" rel="stylesheet" type="text/css">
 <link href="/smartcan/assets/css/menubar.css" rel="stylesheet" type="text/css">
@@ -101,12 +102,22 @@
 			<div class="myarea_wrap">
 			<div class="mymenu">
 				<div class="couwrap_off">
-					<p>
-					서비스 이용을<br>
-					위해 로그인<br>
-					해주세요 <br>
-					</p>
-					<input type="button" class="btn_log" value="로그인" onclick="location.href='/smartcan/user/loginform';">
+					<c:choose>
+						<c:when test='${empty authUser}'>
+							<p>
+								서비스 이용을<br> 위해 로그인<br> 해주세요 <br>
+							</p>
+							<input type="button" class="btn_log" value="로그인"
+								onclick="location.href='/smartcan/user/loginform';">
+								</c:when>
+						<c:otherwise>
+								<p>
+								환영합니다<br>${authUser.name }님 <br> ^^
+								</p>
+								<input type="button" class="btn_log" value="로그아웃"
+								onclick="location.href='/smartcan/user/logout';">
+						</c:otherwise>
+					</c:choose>
 				</div>
 				<ul class="my_lst">
 					<li>

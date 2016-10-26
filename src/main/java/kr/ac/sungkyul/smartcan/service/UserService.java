@@ -16,6 +16,12 @@ import kr.ac.sungkyul.smartcan.dao.UserDao;
 import kr.ac.sungkyul.smartcan.vo.PassLinkVo;
 import kr.ac.sungkyul.smartcan.vo.UserVo;
 
+/*
+2016-09-15
+ 작업자 : 최솔빈
+ 개발 상황 : 완료
+*/
+
 @Service
 public class UserService {
 	@Autowired

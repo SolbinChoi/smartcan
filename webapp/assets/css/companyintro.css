@@ -1,6 +1,7 @@
 @CHARSET "UTF-8";
 @import "smartcan.css";
 
+/* 회사소개 폼 css */
 #highlight{
 	margin-bottom:10px;
 	font-weight:bold;

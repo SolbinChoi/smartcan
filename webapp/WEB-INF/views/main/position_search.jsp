@@ -5,11 +5,14 @@
 <!doctype html>
 <html>
 <head>
-<title>SmartCan</title>
+<title>SmartCan 위치 검색</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<link href="/smartcan/assets/css/map.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=58419160bc8ff11be1b0bd521678c6ac"></script>
-<script type="text/javascript" src="/smartcan/assets/js/jquery/jquery-1.9.0.js"></script>
+<link href="/smartcan/assets/css/map.css" rel="stylesheet"
+	type="text/css">
+<script type="text/javascript"
+	src="//apis.daum.net/maps/maps3.js?apikey=58419160bc8ff11be1b0bd521678c6ac"></script>
+<script type="text/javascript"
+	src="/smartcan/assets/js/jquery/jquery-1.9.0.js"></script>
 
 <script>
 $(function(){
@@ -19,7 +22,7 @@ if('${map.keyword}'=='서울' || '${map.keyword}'== '서울역' || '${map.keywor
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 mapOption = { 
     center: new daum.maps.LatLng(37.5547992, 126.9684953),
-    level: 4 // 지도의 확대 레벨
+    level: 7 // 지도의 확대 레벨
 };
 
 var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
@@ -29,7 +32,7 @@ var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니�
 	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 	mapOption = { 
 	    center: new daum.maps.LatLng(37.503463, 126.72378),
-	    level: 4// 지도의 확대 레벨
+	    level: 6// 지도의 확대 레벨
 	};
 
 	var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
@@ -38,7 +41,7 @@ var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니�
 	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 	mapOption = { 
 	    center: new daum.maps.LatLng(37.3800181, 126.9264755),
-	    level: 4 // 지도의 확대 레벨
+	    level: 6 // 지도의 확대 레벨
 	};
 
 	var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
@@ -48,7 +51,7 @@ var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니�
 		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 		mapOption = { 
 		    center: new daum.maps.LatLng(37.5547992, 126.9684953),
-		    level: 4 // 지도의 확대 레벨
+		    level: 6 // 지도의 확대 레벨
 		};
 	}
 	
@@ -123,6 +126,11 @@ function makeOutListener(infowindow) {
 
 					</div>
 
+					<div id="location_img">
+						<img src="/smartcan/assets/images/map/map.JPG">
+					</div>
+
+					<!-- 키워드 검색창 -->
 					<div id="search">
 						<form id="search_form" action="/smartcan/map/list" method="get">
 							<input type="text" id="kwd" name="kwd" value="${map.keyword }">
@@ -130,6 +138,7 @@ function makeOutListener(infowindow) {
 						</form>
 					</div>
 
+					<!-- 위치검색 리스트 -->
 					<div id=map_container>
 						<div id="board">
 							<table class="tbl-ex">
@@ -151,7 +160,7 @@ function makeOutListener(infowindow) {
 							<c:if test='${empty map.list }'>
 								<div id="map_right">
 									<div id="map_risk">
-										<img src="/gs25/assets/images/customcenter/risk.png">
+										<img src="/smartcan/assets/images/map/warning.png">
 									</div>
 									<p class="map_list-right">
 										검색된 결과를 찾을 수 없습니다. <br>
@@ -160,44 +169,46 @@ function makeOutListener(infowindow) {
 							</c:if>
 
 							<c:if test='${not empty map.list }'>
-							<!-- begin:paging -->
-							<div class="pager">
-								<ul>
 
-									<c:if test="${map.prevtoPage >= 0 }">
-										<li><a href="/smartcan/map/list?p=${map.prevtoPage }">◀◀</a></li>
-									</c:if>
+								<!-- 페이징 시작 -->
 
-									<c:if test="${map.prevPage >= 0 }">
-										<li><a href="/smartcan/map/list?p=${map.prevPage }">◀</a></li>
-									</c:if>
+								<div class="pager">
+									<ul>
+
+										<c:if test="${map.prevtoPage >= 0 }">
+											<li><a href="/smartcan/map/list?p=${map.prevtoPage }">◀◀</a></li>
+										</c:if>
+
+										<c:if test="${map.prevPage >= 0 }">
+											<li><a href="/smartcan/map/list?p=${map.prevPage }">◀</a></li>
+										</c:if>
 
 
-									<c:forEach begin='${map.firstPage }' end='${map.lastPage }'
-										step='1' var='i'>
-										<c:choose>
-											<c:when test='${map.currentPage == i }'>
-												<li class="selected">${i }</li>
-											</c:when>
+										<c:forEach begin='${map.firstPage }' end='${map.lastPage }'
+											step='1' var='i'>
+											<c:choose>
+												<c:when test='${map.currentPage == i }'>
+													<li class="selected">${i }</li>
+												</c:when>
 
-											<c:when test='${i > map.pageCount }'>
-												<li>${i }</li>
-											</c:when>
+												<c:when test='${i > map.pageCount }'>
+													<li>${i }</li>
+												</c:when>
 
-											<c:otherwise>
-												<li><a href="/smartcan/map/list?p=${i }">${i }</a></li>
-											</c:otherwise>
-										</c:choose>
-									</c:forEach>
+												<c:otherwise>
+													<li><a href="/smartcan/map/list?p=${i }">${i }</a></li>
+												</c:otherwise>
+											</c:choose>
+										</c:forEach>
 
-									<c:if test='${map.nextPage > 0 }'>
-										<li><a href="/smartcan/map/list?p=${map.nextPage }">▶</a></li>
-									</c:if>
-									<c:if test='${map.nexttoPage > 0 }'>
-										<li><a href="/smartcan/map/list?p=${map.nexttoPage }">▶▶</a></li>
-									</c:if>
-								</ul>
-							</div>
+										<c:if test='${map.nextPage > 0 }'>
+											<li><a href="/smartcan/map/list?p=${map.nextPage }">▶</a></li>
+										</c:if>
+										<c:if test='${map.nexttoPage > 0 }'>
+											<li><a href="/smartcan/map/list?p=${map.nexttoPage }">▶▶</a></li>
+										</c:if>
+									</ul>
+								</div>
 							</c:if>
 						</div>
 						<div id="map"></div>

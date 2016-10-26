@@ -1,13 +1,13 @@
 package kr.ac.sungkyul.smartcan.vo;
 
 public class StatisticVo {
-	private Long no;
-	private Long amount;
-	private Long day;
-	private Long month_no;
-	private Long point_no;
-	private String name;
-	private Long sum;
+	private Long no; // 통계량 번호(PK)
+	private Long amount; // 쓰레기양
+	private Long day; // 날짜
+	private Long month_no; // 월
+	private Long point_no; // 지점위치 번호 (FK)
+	private String name;  // 위치명
+	private Long sum; // 통계 합
 	
 	public Long getNo() {
 		return no;

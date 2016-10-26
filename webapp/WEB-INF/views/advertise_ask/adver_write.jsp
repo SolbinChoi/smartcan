@@ -6,6 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<title>SmartCan 광고문의</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="/smartcan/assets/css/customboard.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="/smartcan/assets/js/jquery/jquery-1.9.0.js"></script>

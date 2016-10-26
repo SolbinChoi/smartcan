@@ -1,10 +1,10 @@
 package kr.ac.sungkyul.smartcan.vo;
 
 public class PassLinkVo {
-	private Long no;
-	private String link;
+	private Long no; // 링크번호 (PK)
+	private String link; // 비밀번호 변경 링크
 	private Integer state; // 상태
-	private Long user_no;
+	private Long user_no; // 사용자 번호
 	
 	public Long getNo() {
 		return no;

@@ -47,7 +47,7 @@
 							<td id="attachFile" data-fno="${AttachFileAdVO.fNO }">${AttachFileAdVO.orgName }</td>
 							</tr>
 						</table>
-						<img id="adver_img" src="${AttachFileAdVO.imageurl }" width=200px; height="200px">
+						<img id="adver_img" src="${AttachFileAdVO.imageurl }" width=250px; height="250px">
 				<div id="cma_image" style="width:95%; max-width:100%; border:1px solid #c0c0c0;">
 				</div>
 						<div class="bottom">

@@ -16,7 +16,6 @@ function getThumbnailPrivew(html, $target) {
         var reader = new FileReader();
         reader.onload = function (e) {
             $target.css('display', '');
-            //$target.css('background-image', 'url(\"' + e.target.result + '\")'); // 배경으로 지정시
             $target.html('<img src="' + e.target.result + '" border="0" alt="" />');
         }
         reader.readAsDataURL(html.files[0]);
@@ -36,6 +35,8 @@ function getThumbnailPrivew(html, $target) {
 					<div id="wrap">
 						<h1>광고문의</h1>
 					</div>
+					
+					<!-- 답글 폼 -->
 					<div id="board">
 						<form class="board-form" method="post" action="/smartcan/adver/reply" enctype="multipart/form-data">
 							<input type="hidden" name="user_no" value="${authUser.no }">

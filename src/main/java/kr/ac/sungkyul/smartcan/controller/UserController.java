@@ -17,6 +17,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import kr.ac.sungkyul.smartcan.service.UserService;
 import kr.ac.sungkyul.smartcan.vo.UserVo;
 
+/*
+2016-09-15
+ 작업자 : 최솔빈
+ 개발 상황 : 완료
+*/
+
 @Controller
 @RequestMapping("/user")
 public class UserController {
@@ -156,10 +162,11 @@ public class UserController {
 		return "/user/repassword";
 	}
 	
+	// 비밀번호 설정
 	@ResponseBody
 	@RequestMapping(value ="/setPass", method = {RequestMethod.GET, RequestMethod.POST})	//재설정 비번 저장
 	public String setPassword(Long no, String password){
-		//state 1로 변경
+		//state(상태) 1로 변경
 		String result = userService.setpass(no,password);
 		return result;
 	}
@@ -168,8 +175,8 @@ public class UserController {
 	public String passResult(){
 		return "/user/passresult";
 	}
-	
-	@RequestMapping("/repasswordSuccess")	//비번 재설정 완료
+	//비번 재설정 완료
+	@RequestMapping("/repasswordSuccess")	
 	public String repasswordSuccess(){
 		return "/user/repasswordSuccess";
 	}

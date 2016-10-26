@@ -9,6 +9,12 @@ import org.springframework.stereotype.Repository;
 import kr.ac.sungkyul.smartcan.vo.PassLinkVo;
 import kr.ac.sungkyul.smartcan.vo.UserVo;
 
+/*
+2016-09-15
+ 작업자 : 최솔빈
+ 개발 상황 : 완료
+*/
+
 @Repository
 public class UserDao {
 	

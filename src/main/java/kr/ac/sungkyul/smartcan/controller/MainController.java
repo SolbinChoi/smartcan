@@ -12,6 +12,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.ac.sungkyul.smartcan.service.MainService;
 import kr.ac.sungkyul.smartcan.vo.UserVo;
+/*
+2016-10-01 
+ 작업자 : 최솔빈
+ 개발 상황 : 완료
+*/
 
 @Controller
 public class MainController {
@@ -19,6 +24,7 @@ public class MainController {
 	@Autowired
 	MainService mainService;
 	
+	// 메인
 	@RequestMapping("/main")
 	public String main(){
 		return "/main/index";
@@ -28,10 +34,7 @@ public class MainController {
 	public String companyIntro(){
 		return "/main/companyintro";
 	}
-	@RequestMapping("/test")
-	public String test(){
-		return "/main/test";
-	}
+
 	@RequestMapping("/userManage")
 	public String userManage(Model model, 
 			@RequestParam(value = "p", required = true, defaultValue = "1") String page,
@@ -41,9 +44,9 @@ public class MainController {
 		model.addAttribute("map", map);
 		return "/main/userManage";
 	}
+	// 오시는 길 (지도)
 	@RequestMapping("/location")
 	public String location(){
 		return "/main/location";
 	}
-
 }

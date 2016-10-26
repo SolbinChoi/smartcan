@@ -10,17 +10,24 @@ import org.springframework.stereotype.Repository;
 
 import kr.ac.sungkyul.smartcan.vo.UserVo;
 
+/*
+2016-10-01
+ 작업자 : 최솔빈
+ 개발 상황 : 완료
+*/
+
 @Repository
 public class MainDao {
 
 	@Autowired
 	private SqlSession sqlSession;
 	
+	// 회원의 총 수
 	public int getTotalCount(){
 		return sqlSession.selectOne("manage.totalCount");
 	}
 	
-	// 게시판 리스트
+	// 회원 관리 리스트
 	public List<UserVo> getList(int page, int pagesize, String keyword) {
 		Map<String, Object> map = new HashMap<>();
 
@@ -44,6 +51,7 @@ public class MainDao {
 		}
 	}
 	
+	// 회원정보 삭제
 	public void deleteUser(Long no){
 		sqlSession.delete("manage.deleteUser", no);
 	}

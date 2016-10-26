@@ -14,6 +14,12 @@ import kr.ac.sungkyul.smartcan.dao.AdverCenterDao;
 import kr.ac.sungkyul.smartcan.vo.AdverBoardVo;
 import kr.ac.sungkyul.smartcan.vo.AttachFileAdVO;
 
+/*
+2016-10-14
+ 작업자 : 최솔빈
+ 개발 상황 : 완료
+*/
+
 @Service
 public class AdverService {
 	// 리스팅 되는 게시물 수

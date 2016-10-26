@@ -1,6 +1,7 @@
 @CHARSET "UTF-8";
 @IMPORT "smartcan.css";
 
+/* 회원관리폼 css */
 #manage_wrap{
 	margin: 0 auto; width: 1500px;
 }

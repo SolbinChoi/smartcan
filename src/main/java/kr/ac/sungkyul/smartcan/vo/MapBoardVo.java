@@ -5,10 +5,10 @@ public class MapBoardVo {
 	private Long no;
 	private String name;
 	private String address;
-	private double localx;
-	private double localy;
-	private double amount;
-	private Long regionno;
+	private double localx; // 좌표 X
+	private double localy; // 좌표 Y
+	private double amount; // 쓰레기양 
+	private Long regionno; // 지역번호
 	
 	public Long getNo() {
 		return no;

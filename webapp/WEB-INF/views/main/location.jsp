@@ -15,6 +15,7 @@
 	<div id="container">
 		<jsp:include page="/WEB-INF/views/include/header.jsp" />
 		<div id="content">
+		<jsp:include page="/WEB-INF/views/include/menubar.jsp" />
 			<div class="container_map">
 				<div class="container_mapsub">
 
@@ -27,6 +28,7 @@
 						</div>
 					</div>
 					
+					<!-- 성결대 지도 띄우기 -->
 					<div id="mid_wrap">
 						<div id="map_btn">
 							<p>
@@ -67,30 +69,30 @@
 	    level: 3 // 지도의 확대 레벨
 	};  
 	
-	var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+	var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성
 	
 	
-	// 마커가 표시될 위치입니다 
+	// 마커가 표시될 위치 삽입 
 	var markerPosition  = new daum.maps.LatLng(37.3800184,126.9264758); 
 
-	// 마커를 생성합니다
+	// 마커 생성하기
 	var marker = new daum.maps.Marker({
 	    position: markerPosition
 	});
 
-	// 마커가 지도 위에 표시되도록 설정합니다
+	// 마커가 지도 위에 표시되도록 설정하기
 	marker.setMap(map);
 	
 	function panTo() {
-	    // 이동할 위도 경도 위치를 생성합니다 
+	    // 이동할 위도 경도 위치를 생성
 	    var moveLatLon = new daum.maps.LatLng(37.3800184,126.9264758);
 	    
-	    // 지도 중심을 부드럽게 이동시킵니다
-	    // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+	    // 지도 중심을 부드럽게 이동
+	    // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동
 	    map.panTo(moveLatLon);            
 	}        
 
-	//지도타입 컨트롤의 지도 또는 스카이뷰 버튼을 클릭하면 호출되어 지도타입을 바꾸는 함수입니다
+	//지도타입 컨트롤의 지도 또는 스카이뷰 버튼을 클릭하면 호출되어 지도타입을 바꾸는 함수
 	function setMapType(maptype) { 
 	var roadmapControl = document.getElementById('btnRoadmap');
 	var skyviewControl = document.getElementById('btnSkyview'); 
@@ -105,12 +107,12 @@
 	}
 	}
 	
-	//지도 확대, 축소 컨트롤에서 확대 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+	//지도 확대, 축소 컨트롤에서 확대 버튼을 누르면 호출되어 지도를 확대하는 함수
 	function zoomIn() {
 	map.setLevel(map.getLevel() - 1);
 	}
 	
-	//지도 확대, 축소 컨트롤에서 축소 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+	//지도 확대, 축소 컨트롤에서 축소 버튼을 누르면 호출되어 지도를 확대하는 함수
 	function zoomOut() {
 	map.setLevel(map.getLevel() + 1);
 	}

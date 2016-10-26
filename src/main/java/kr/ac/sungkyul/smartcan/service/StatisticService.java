@@ -8,6 +8,11 @@ import org.springframework.stereotype.Service;
 
 import kr.ac.sungkyul.smartcan.dao.StatisticDao;
 
+/*
+2016-09-20
+ 작업자 : 최솔빈
+ 개발 상황 : 완료
+*/
 
 @Service
 public class StatisticService {

@@ -9,10 +9,14 @@ import java.sql.SQLException;
 
 import org.springframework.stereotype.Repository;
 
+/*
+2016-09-20
+ 작업자 : 최솔빈
+ 개발 상황 : 완료
+*/
+
 @Repository
 public class StatisticDao {
-	
-	
 	
 	private Connection getConnection() throws SQLException {
 
@@ -28,7 +32,7 @@ public class StatisticDao {
 		return conn;
 	}
 	
-	// 안양 쓰레기양
+	// 안양 쓰레기양 반환
 	public Long getAnyang(){
 		Long anyang = 0L;
 		Connection conn = null;
@@ -38,7 +42,6 @@ public class StatisticDao {
 		try {
 			
 			conn = getConnection();
-			
 			
 			String sql = "select sum(amount) from (select a.amount, b.name, b.region_no from DAILYSTATISTIC a, point b where a.point_no = b.no) c where c.region_no = 2";
 
@@ -69,6 +72,7 @@ public class StatisticDao {
 		}
 		return anyang;
 	}
+	// 인천 쓰레기양 반환
 	public Long getIncheon(){
 		Long incheon = 0L;
 		Connection conn = null;
@@ -77,7 +81,6 @@ public class StatisticDao {
 		try {
 			
 			conn = getConnection();
-			
 			
 			String sql = "select sum(amount) from (select a.amount, b.name, b.region_no from DAILYSTATISTIC a, point b where a.point_no = b.no) c where c.region_no = 3";
 
@@ -109,16 +112,14 @@ public class StatisticDao {
 		return incheon;
 		
 	}
-	
+	// 서울 쓰레기양 반환
 	public Long getSeoul(){
 		Long seoul = 0L;
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try {
-			
 			conn = getConnection();
-			
 			
 			String sql = "select sum(amount) from (select a.amount, b.name, b.region_no from DAILYSTATISTIC a, point b where a.point_no = b.no) c where c.region_no = 1";
 
@@ -149,6 +150,7 @@ public class StatisticDao {
 		}
 		return seoul;
 	}
+	// 안양 쓰레기통 설치 수 반환
 	public Long getAnyangCount(){
 		Long anyangCount = 0L;
 		Connection conn = null;
@@ -157,7 +159,6 @@ public class StatisticDao {
 		try {
 			
 			conn = getConnection();
-			
 			
 			String sql = "select count(*) from (select * from point) a where a.region_no = 2";
 
@@ -188,6 +189,7 @@ public class StatisticDao {
 		}
 		return anyangCount;
 	}
+	// 인천 쓰레기통 설치 수 반환
 	public Long getIncheonCount(){
 		Long incheonCount = 0L;
 		Connection conn = null;
@@ -196,7 +198,6 @@ public class StatisticDao {
 		try {
 			
 			conn = getConnection();
-			
 			
 			String sql = "select count(*) from (select * from point) a where a.region_no =3";
 
@@ -227,6 +228,8 @@ public class StatisticDao {
 		}
 		return incheonCount;
 	}
+	
+	// 서울 쓰레기통 설치 수 반환
 	public Long getSeoulCount(){
 		Long seoulCount = 0L;
 		Connection conn = null;
@@ -235,7 +238,6 @@ public class StatisticDao {
 		try {
 			
 			conn = getConnection();
-			
 			
 			String sql = "select count(*) from (select * from point) a where a.region_no = 1";
 

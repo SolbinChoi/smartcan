@@ -6,10 +6,10 @@ public class CustomBoardVo {
 	private String content;
 	private Integer count;
 	private Integer groupNo;
-	private Integer groupOrderNo;
-	private Integer depth;
-	private Long UserNo;
-	private String regdate;
+	private Integer groupOrderNo; // 그룹 내 순서
+	private Integer depth; // 글 깊이
+	private Long UserNo; // 사용자 번호
+	private String regdate; // 등록일
 	private String name;
 	private String UserName;
 	private Integer orderNo;

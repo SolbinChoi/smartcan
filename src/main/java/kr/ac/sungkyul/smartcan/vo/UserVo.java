@@ -1,15 +1,15 @@
 package kr.ac.sungkyul.smartcan.vo;
 
 public class UserVo {
-	private Long no;
+	private Long no; // 사용자 번호 (PK)
 	private String name;
 	private String email;
 	private String password;
 	private String birth;
-	private String gender;
+	private String gender; // 성별
 	private String address;
 	private String phone;
-	private String position; // 직책
+	private String position; // 사용자의 직책
 	
 	public Long getNo() {
 		return no;

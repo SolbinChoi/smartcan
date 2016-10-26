@@ -1,5 +1,7 @@
 @CHARSET "UTF-8";
 @IMPORT "smartcan.css";
+
+/*로그인 css*/
 body{
 	position:relative;
 	margin:0;

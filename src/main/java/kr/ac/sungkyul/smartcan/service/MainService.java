@@ -10,6 +10,12 @@ import org.springframework.stereotype.Service;
 import kr.ac.sungkyul.smartcan.dao.MainDao;
 import kr.ac.sungkyul.smartcan.vo.UserVo;
 
+/*
+2016-10-01
+ 작업자 : 최솔빈
+ 개발 상황 : 완료
+*/
+
 @Service
 public class MainService {
 	// 리스팅 되는 게시물 수
