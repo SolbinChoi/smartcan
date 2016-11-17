@@ -108,15 +108,7 @@
 										<td>${vo.phone }</td>
 										<td>${vo.position }</td>
 										<td>
-											<!-- <c:choose>
-								<c:when test='${authUser.no==1 }'>
-								<a href="/smartcan/userdelete?no=${vo.no}" class="del">삭제</a>
-								</c:when>
-								
-								<c:otherwise>
-									&nbsp;
-								</c:otherwise>
-							</c:choose> --> &nbsp;
+										 &nbsp;
 										</td>
 									</tr>
 								</c:forEach>

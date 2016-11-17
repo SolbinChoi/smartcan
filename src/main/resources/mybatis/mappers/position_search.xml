@@ -19,7 +19,7 @@
    			   name,
    			   address,
    			   amount from point) c) 
-   	where #{page_start}<=rn and rn<=#{page_end}
+   	where #{page_start}<=rn and rn<=#{page_end} order by amount desc
    ]]>
    </select>
    

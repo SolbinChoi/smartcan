@@ -21,12 +21,12 @@ public class MainDao {
 
 	@Autowired
 	private SqlSession sqlSession;
-	
+
 	// 회원의 총 수
-	public int getTotalCount(){
+	public int getTotalCount() {
 		return sqlSession.selectOne("manage.totalCount");
 	}
-	
+
 	// 회원 관리 리스트
 	public List<UserVo> getList(int page, int pagesize, String keyword) {
 		Map<String, Object> map = new HashMap<>();
@@ -50,9 +50,9 @@ public class MainDao {
 			return list;
 		}
 	}
-	
+
 	// 회원정보 삭제
-	public void deleteUser(Long no){
+	public void deleteUser(Long no) {
 		sqlSession.delete("manage.deleteUser", no);
 	}
 }

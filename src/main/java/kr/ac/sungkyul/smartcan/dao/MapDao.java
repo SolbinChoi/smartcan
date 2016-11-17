@@ -22,12 +22,12 @@ public class MapDao {
 	@Autowired
 	private SqlSession sqlSession;
 
-	//게시물 리스트 가져오기
+	// 게시물 리스트 가져오기
 	public List<MapBoardVo> getList(int page, int pagesize, String keyword) {
 
 		Map<String, Object> map = new HashMap<>();
 
-		 //키보드가 null or 비어있을 때 리스트 가져오기
+		// 키보드가 null or 비어있을 때 리스트 가져오기
 		if (keyword == null || "".equals(keyword)) {
 
 			map.put("page_start", (page - 1) * pagesize + 1);
@@ -37,7 +37,7 @@ public class MapDao {
 
 			return list;
 
-		//검색된 리스트 가져오기
+			// 검색된 리스트 가져오기
 		} else {
 
 			map.put("keyword", "%" + keyword + "%");
@@ -51,19 +51,19 @@ public class MapDao {
 		}
 	}
 
-	 //게시판 총 개수
+	// 게시판 총 개수
 	public int getTotalCount() {
 
 		int totalCount = sqlSession.selectOne("search.getTotalCount");
 		return totalCount;
 	}
-	
-	//지도 리스트 가져오기
+
+	// 지도 리스트 가져오기
 	public List<MapBoardVo> getList(String keyword, Long reno) {
 
 		Map<String, Object> map = new HashMap<>();
-	  	
-		//키보드가 null or 비어있을 때 지도 리스트 가져오기
+
+		// 키보드가 null or 비어있을 때 지도 리스트 가져오기
 		if (keyword == null || "".equals(keyword)) {
 
 			map.put("reno", reno);
@@ -71,32 +71,29 @@ public class MapDao {
 
 			return list;
 
-		//검색된 지도 리스트 가져오기
+			// 검색된 지도 리스트 가져오기
 		} else {
-			
+
 			map.put("keyword", "%" + keyword + "%");
 			List<MapBoardVo> list = sqlSession.selectList("search.getMapListKeyword", map);
 
 			return list;
 		}
 	}
-	
-	//(안드로이드)지도 좌표 리스트
-	public List<MapBoardVo> getPointList(){
-		
-		List<MapBoardVo> list=sqlSession.selectList("search.getPointList");
+
+	// (안드로이드)지도 좌표 리스트
+	public List<MapBoardVo> getPointList() {
+
+		List<MapBoardVo> list = sqlSession.selectList("search.getPointList");
 		return list;
 	}
-	
-	public void update(Long id,Double amount){
+
+	public void update(Long id, Double amount) {
 		Map<String, Object> map = new HashMap<>();
 
 		map.put("id", id);
 		map.put("amount", amount);
-		sqlSession.update("search.update",map);
+		sqlSession.update("search.update", map);
 	}
-
-	
-
 
 }
